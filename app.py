@@ -3,19 +3,21 @@ from PIL import Image
 import pytesseract
 from pdf2image import convert_from_bytes
 
-pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
-
 def extract_text_from_image(image):
     extracted_text = pytesseract.image_to_string(image)
     return extracted_text
 
 with st.sidebar:
-    st.title('Connect:')
+    st.image('logo.png', use_column_width=True)
+    st.title(':blue[Sahil Sharma] :green[| _MSc. Data Science_]')
+    st.subheader('Connect:')
     st.link_button(":blue[LinkedIn] :computer:", 'https://www.linkedin.com/in/sahilsharma50/', use_container_width=True)
     st.link_button(":grey[GitHub] :desktop_computer:", 'https://github.com/sahilsharma50/', use_container_width=True)
 
+
 def main():
     st.title('_Give Data Get_ :blue[Text] :paperclip:')
+    st.markdown('### Please upload the PDF or image from which you would like to extract text information.')
 
     input_file = st.file_uploader("Upload a File", type=['png', 'jpg', 'jpeg', 'pdf'])
 
