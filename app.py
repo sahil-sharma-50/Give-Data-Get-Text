@@ -17,7 +17,7 @@ with st.sidebar:
 
 def main():
     st.title('_Give Data Get_ :blue[Text] :paperclip:')
-    st.markdown('### Please upload the PDF or image from which you would like to extract text information.')
+    st.markdown('### Please upload the PDF or image from which you would like to extract text information.[English only!!]')
 
     input_file = st.file_uploader("Upload a File", type=['png', 'jpg', 'jpeg', 'pdf'])
 
