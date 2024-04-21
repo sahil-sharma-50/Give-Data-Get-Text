@@ -2,4 +2,3 @@ streamlit
 pillow
 pytesseract
 pdf2image
-tesseract-ocr
