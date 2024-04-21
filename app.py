@@ -3,8 +3,6 @@ from PIL import Image
 import pytesseract
 from pdf2image import convert_from_bytes
 
-tesseract_path = os.getenv('TESSERACT_PATH', r'/usr/bin/tesseract')
-pytesseract.pytesseract.tesseract_cmd = tesseract_path
 
 def extract_text_from_image(image):
     extracted_text = pytesseract.image_to_string(image)
